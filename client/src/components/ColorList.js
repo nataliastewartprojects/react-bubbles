@@ -47,7 +47,7 @@ const ColorList = ({ colors, updateColors }) => {
     axiosWithAuth()
       .delete(`/api/colors/${color.id}`)
       .then((res) => {
-        console.log("DELETE-RES:", res);
+        // console.log("DELETE-RES:", res);
         const deletedItem = colors.filter((item) => item.id !== res.data);
         updateColors(deletedItem);
         push("/Bubble-page");

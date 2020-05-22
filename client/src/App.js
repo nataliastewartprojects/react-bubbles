@@ -9,6 +9,14 @@ import PrivateRoute from "./components/PrivateRoute";
 function App() {
   return (
     <Router>
+      <ul>
+        <li>
+          <Link to="/">Login</Link>
+        </li>
+        <li>
+          <Link to="/bubble-page">Bubble Page</Link>
+        </li>
+      </ul>
       <div className="App">
         <Switch>
           <Route exact path="/" component={Login} />
