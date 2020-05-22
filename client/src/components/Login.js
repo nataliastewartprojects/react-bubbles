@@ -28,8 +28,8 @@ class Login extends React.Component {
       .post("/api/login", this.state.credentials)
       .then((res) => {
         console.log("LOGIN- RES:", res.data);
-        // localStorage.setItem("token", res.data.payload);
-        // this.props.history.push("/bubble-page");
+        localStorage.setItem("token", res.data.payload);
+        this.props.history.push("/bubble-page");
       })
       .catch((err) => console.log("LOGIN ERROR:", err));
   };
